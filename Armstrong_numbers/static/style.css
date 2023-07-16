@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    height: 100vh;
+}
+
+body {
+    background: linear-gradient(to left, #7513a3, #4318b8)
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box,
+.prompt_box {
+    width: 500px;
+    height: 400px;
+    background: white;
+    flex-direction: column;
+}
+
+.box :is(h1,
+p,
+form) {
+    margin: 8px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.box h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+form {
+    flex-direction: column;
+}
+
+form input {
+    margin-bottom: 8px;
+    width: 350px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #00000073;
+}
+
+.btn {
+    width: 150px;
+    height: 35px;
+    font-size: 1.1rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: #4318b8;
+    color: #fff;
+}
+
+.prompt_box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.prompt_box h1 {
+    margin-bottom: 10px;
+}
+
+.prompt_box.active {
+    display: flex;
+}
+
+.parent {
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.child {
+    display: inline-block;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+}
+
+.glow {
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
